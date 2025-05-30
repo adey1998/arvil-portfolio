@@ -29,11 +29,11 @@ export default function About() {
           </p>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-6 font-inter">
-            I&apos;ve deployed containerized apps with Docker and CI/CD pipelines, and launched on platforms like Render, AWS, and Azure. Whether it's coding, storytelling, or translating features into value — I&apos;m in my zone.
+            I&apos;ve deployed containerized apps with Docker and CI/CD pipelines, and launched on platforms like Render, AWS, and Azure. Whether it&apos;s coding, storytelling, or translating features into value — I&apos;m in my zone.
           </p>
 
           <p className="text-gray-400 text-lg leading-relaxed font-inter">
-            On the side, I&apos;m building a cancer screening platform that uses AI and NLP to help clinics catch disease earlier and save lives. It's mission-driven work, and it&apos;s what keeps me fired up about tech.
+            On the side, I&apos;m building a cancer screening platform that uses AI and NLP to help clinics catch disease earlier and save lives. It&apos;s mission-driven work, and it&apos;s what keeps me fired up about tech.
           </p>
 
           <p className="text-gray-400 text-lg leading-relaxed font-inter mt-6">

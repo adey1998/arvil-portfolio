@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import Image from 'next/image'
 
 export default function SyncroPage() {
     const techStack = [
@@ -141,7 +142,7 @@ export default function SyncroPage() {
                     className="space-y-8"
                 >
                     <h2 className="text-2xl font-poppins font-semibold text-white mb-4">In Action</h2>
-                   
+
                     <p className="text-sm text-gray-400 mb-3">Scroll → to view more</p>
 
                     <div className="overflow-x-auto">
@@ -204,7 +205,16 @@ export default function SyncroPage() {
                                     className="min-w-[280px] md:min-w-[320px] lg:min-w-[360px] rounded-lg overflow-hidden shadow-xl bg-[#111827] border border-white/10 hover:bg-[#1f2937] transition"
                                 >
                                     <Zoom>
-                                        <img src={img.src} alt={img.alt} className="w-full h-56 object-cover" />
+                                        <div className="relative w-full h-56">
+                                            <Image
+                                                src={img.src}
+                                                alt={img.alt}
+                                                fill
+                                                unoptimized
+                                                className="object-cover rounded-t-lg"
+                                                sizes="(max-width: 768px) 90vw, 33vw"
+                                            />
+                                        </div>
                                     </Zoom>
                                     <div className="p-3 text-sm text-gray-300 font-inter">{img.caption}</div>
                                 </motion.div>
