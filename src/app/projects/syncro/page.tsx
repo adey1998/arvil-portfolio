@@ -82,7 +82,7 @@ export default function SyncroPage() {
                         Syncro – Remote Productivity API
                     </h1>
                     <p className="text-lg text-gray-300 font-inter">
-                        This ain’t your average CRUD app. 
+                        This ain’t your average CRUD app.
                         Syncro is a full-on Spring Boot backend built for real-world teams — secure auth, role-based access, Dockerized deployment, and CI/CD from the jump. You could drop this into a startup tomorrow.
                     </p>
                 </motion.div>
@@ -140,71 +140,78 @@ export default function SyncroPage() {
                     transition={{ duration: 0.8 }}
                     className="space-y-8"
                 >
-                    <h2 className="text-2xl font-poppins font-semibold text-white">In Action</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {[
-                            {
-                                src: "/images/syncro/login-token (admin).png",
-                                alt: "Login request (ADMIN) returning JWT",
-                                caption: "Secure login (ADMIN) returning a JWT token via /api/auth/login",
-                            },
-                            {
-                                src: "/images/syncro/get-users (admin).png",
-                                alt: "Get all users as ADMIN",
-                                caption: "Get users ONLY when logged in as ADMIN via /api/users",
-                            },
-                            {
-                                src: "/images/syncro/login-token (user).png",
-                                alt: "Login request (USER) returning JWT",
-                                caption: "Secure login (USER) returning a JWT token via /api/auth/login",
-                            },
-                            {
-                                src: "/images/syncro/RBAC - access denied (user).png",
-                                alt: "Get all users as USER",
-                                caption: "RBAC — Denied access to GET all users because role='USER'"
-                            },
-                            {
-                                src: "/images/syncro/create-task.png",
-                                alt: "Create a task",
-                                caption: "Create a new task"
-                            },
-                            {
-                                src: "/images/syncro/get-tasks.png",
-                                alt: "Get all tasks",
-                                caption: "Get all tasks"
-                            },
-                            {
-                                src: "/images/syncro/docker-logs-backend.png",
-                                alt: "Docker Compose terminal logs",
-                                caption: "Spring Boot containers starting via Docker Compose",
-                            },
-                            {
-                                src: "/images/syncro/docker-logs-postgres.png",
-                                alt: "Docker Compose terminal logs",
-                                caption: "PostgreSQL containers starting via Docker Compose",
-                            },
-                            {
-                                src: "/images/syncro/ci-pipeline.png",
-                                alt: "CI pipeline in GitHub",
-                                caption: "Automated CI pipeline running on GitHub Actions",
-                            },
-                            {
-                                src: "/images/syncro/cd-pipeline.png",
-                                alt: "CD pipeline in Render",
-                                caption: "Automated CD pipeline running on Render",
-                            },
-                        ].map((img, i) => (
+                    <h2 className="text-2xl font-poppins font-semibold text-white mb-4">In Action</h2>
+                   
+                    <p className="text-sm text-gray-400 mb-3">Scroll → to view more</p>
 
-                            <div key={i} className="rounded-lg overflow-hidden shadow-xl bg-[#111827] border border-white/10 hover:bg-[#1f2937] transition">
-                                <Zoom>
-                                    <img src={img.src} alt={img.alt} className="w-full object-cover" />
-                                </Zoom>
-                                <div className="p-4 text-sm text-gray-300 font-inter">{img.caption}</div>
-                            </div>
-
-
-                        ))}
+                    <div className="overflow-x-auto">
+                        <div className="flex gap-6 w-max pb-2">
+                            {[
+                                {
+                                    src: "/images/syncro/login-token (admin).png",
+                                    alt: "Login request (ADMIN) returning JWT",
+                                    caption: "Login as ADMIN – returns JWT",
+                                },
+                                {
+                                    src: "/images/syncro/get-users (admin).png",
+                                    alt: "Get all users as ADMIN",
+                                    caption: "Get users as ADMIN via /api/users",
+                                },
+                                {
+                                    src: "/images/syncro/login-token (user).png",
+                                    alt: "Login request (USER) returning JWT",
+                                    caption: "Login as USER – returns JWT",
+                                },
+                                {
+                                    src: "/images/syncro/RBAC - access denied (user).png",
+                                    alt: "RBAC Denied",
+                                    caption: "USER access denied for /users — RBAC in action",
+                                },
+                                {
+                                    src: "/images/syncro/create-task.png",
+                                    alt: "Create task",
+                                    caption: "Create new task",
+                                },
+                                {
+                                    src: "/images/syncro/get-tasks.png",
+                                    alt: "Get tasks",
+                                    caption: "View all tasks",
+                                },
+                                {
+                                    src: "/images/syncro/docker-logs-backend.png",
+                                    alt: "Docker backend logs",
+                                    caption: "Docker Compose – Spring Boot startup",
+                                },
+                                {
+                                    src: "/images/syncro/docker-logs-postgres.png",
+                                    alt: "Docker Postgres logs",
+                                    caption: "Docker Compose – PostgreSQL startup",
+                                },
+                                {
+                                    src: "/images/syncro/ci-pipeline.png",
+                                    alt: "CI pipeline",
+                                    caption: "GitHub Actions – CI triggered on push",
+                                },
+                                {
+                                    src: "/images/syncro/cd-pipeline.png",
+                                    alt: "CD pipeline",
+                                    caption: "Render – CD pipeline for auto-deploy",
+                                },
+                            ].map((img, i) => (
+                                <motion.div
+                                    key={i}
+                                    whileHover={{ scale: 1.03 }}
+                                    className="min-w-[280px] md:min-w-[320px] lg:min-w-[360px] rounded-lg overflow-hidden shadow-xl bg-[#111827] border border-white/10 hover:bg-[#1f2937] transition"
+                                >
+                                    <Zoom>
+                                        <img src={img.src} alt={img.alt} className="w-full h-56 object-cover" />
+                                    </Zoom>
+                                    <div className="p-3 text-sm text-gray-300 font-inter">{img.caption}</div>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
+
                 </motion.div>
 
 
