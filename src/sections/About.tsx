@@ -25,19 +25,19 @@ export default function About() {
           </p>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-6 font-inter">
-            I'm currently pivoting into Sales Engineering — bringing my technical skills into client-facing roles where I can run demos, solve problems, and communicate solutions that actually land. I’ve worked across both engineering and pre-sales, and I get a kick out of helping customers connect the dots.
+            I&apos;m currently pivoting into Sales Engineering — bringing my technical skills into client-facing roles where I can run demos, solve problems, and communicate solutions that actually land. I&apos;ve worked across both engineering and pre-sales, and I get a kick out of helping customers connect the dots.
           </p>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-6 font-inter">
-            I've deployed containerized apps with Docker and CI/CD pipelines, and launched on platforms like Render, AWS, and Azure. Whether it's coding, storytelling, or translating features into value — I’m in my zone.
+            I&apos;ve deployed containerized apps with Docker and CI/CD pipelines, and launched on platforms like Render, AWS, and Azure. Whether it's coding, storytelling, or translating features into value — I&apos;m in my zone.
           </p>
 
           <p className="text-gray-400 text-lg leading-relaxed font-inter">
-            On the side, I’m building a cancer screening platform that uses AI and NLP to help clinics catch disease earlier and save lives. It's mission-driven work, and it’s what keeps me fired up about tech.
+            On the side, I&apos;m building a cancer screening platform that uses AI and NLP to help clinics catch disease earlier and save lives. It's mission-driven work, and it&apos;s what keeps me fired up about tech.
           </p>
 
           <p className="text-gray-400 text-lg leading-relaxed font-inter mt-6">
-            Feel free to check out my <a href="#projects" className="text-blue-500 hover:underline">projects</a> or reach out — I’m always up for solving hard problems and building meaningful things.
+            Feel free to check out my <a href="#projects" className="text-blue-500 hover:underline">projects</a> or reach out — I&apos;m always up for solving hard problems and building meaningful things.
           </p>
         </div>
 
