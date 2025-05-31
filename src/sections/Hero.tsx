@@ -19,12 +19,12 @@ export default function Hero() {
           Engineering outcomes, not just code.
         </h1>
 
-        <p className="text-lg md:text-2xl font-inter text-gray-400 mb-10 max-w-2xl mx-auto">
+        <p className="text-lg md:text-2xl font-inter text-gray-400 mb-6 max-w-2xl mx-auto">
           Fullstack software engineer + sales engineer helping teams launch faster and sell smarter.
         </p>
 
         {/* Buttons */}
-        <div className="flex justify-center gap-6 mb-10">
+        <div className="flex justify-center gap-5 mb-6">
           <a
             href="#about"
             className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-poppins font-semibold px-8 py-3 rounded-full shadow-xl ring-1 ring-white/10 backdrop-blur transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
