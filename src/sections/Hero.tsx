@@ -15,15 +15,12 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1.2 }}
       >
-        <h1 className="text-6xl md:text-7xl font-poppins font-extrabold mb-4 leading-tight tracking-tight drop-shadow-xl">
-          Hi, I&apos;m{" "}
-          <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
-            Arvil
-          </span>
+        <h1 className="text-6xl md:text-7xl font-poppins font-extrabold mb-4 leading-[1.1] tracking-tight drop-shadow-xl">
+          Engineering outcomes, not just code.
         </h1>
 
         <p className="text-lg md:text-2xl font-inter text-gray-400 mb-10 max-w-2xl mx-auto">
-          Fullstack engineer and aspiring sales engineer, building tech that drives results.
+          Fullstack software engineer + sales engineer helping teams launch faster and sell smarter.
         </p>
 
         {/* Buttons */}
