@@ -127,7 +127,7 @@ export default function OnqiArchitectureClean() {
 
         <section className="space-y-4">
           <div className="text-sm text-gray-400">
-            Here's what Onqi generates for eligible patients — a CMS-ready referral letter.
+            Here&apos;s what Onqi generates for eligible patients — a CMS-ready referral letter.
           </div>
 
           <motion.a
