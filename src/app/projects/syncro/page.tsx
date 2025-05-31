@@ -231,14 +231,14 @@ export default function SyncroPage() {
                     href="https://github.com/adey1998/syncro"
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className="inline-block text-blue-500 font-poppins font-semibold px-8 py-3 rounded-full border border-blue-500 group hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600 hover:text-white hover:shadow-2xl backdrop-blur transition-all duration-300 ease-in-out"
+                    transition={{ type: "spring", stiffness: 250 }}
+                    className="group inline-flex items-center gap-2 text-sm sm:text-base text-blue-400 font-medium px-5 py-2 sm:px-6 sm:py-2.5 border border-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300"
                 >
-                    View Code on GitHub →
+                    <Github className="w-4 h-4 transition-transform group-hover:rotate-[-6deg]" />
+                    View Code on GitHub
                 </motion.a>
-
             </div>
         </motion.main>
     );
