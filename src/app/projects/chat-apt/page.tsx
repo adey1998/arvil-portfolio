@@ -3,9 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ExternalLink, Download } from "lucide-react";
-import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import Image from "next/image";
 
 export default function ChatAptProjectPage() {
     const highlights = [
