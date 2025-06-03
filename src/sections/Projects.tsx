@@ -7,13 +7,20 @@ const projects = [
     description:
       "Enterprise-grade Spring Boot backend with JWT auth, Docker, and CI/CD deployment. This project demonstrates full-stack capabilities and backend architecture.",
     link: "/projects/syncro",
-    type: "Engineering",
+    type: "Software Engineering",
   },
   {
     title: "Onqi Screening – Solution Architecture",
     description:
       "Technical solution design for an AI-powered cancer screening platform. Built to show how clinics can identify high-risk patients earlier using EHR data and NLP models.",
     link: "/projects/onqi-screening-architecture",
+    type: "Sales Engineering",
+  },
+  {
+    title: "ChatAPT – AI-Powered Rentals for Gen Z",
+    description:
+      "Shaped the pitch and product story for an AI-driven rental tool that helps Gen Z find apartments based on lifestyle and intent — not filters.",
+    link: "/projects/chat-apt",
     type: "Sales Engineering",
   },
   {
@@ -26,7 +33,7 @@ const projects = [
 ];
 
 export default function Projects() {
-  const engineeringProjects = projects.filter((p) => p.type === "Engineering");
+  const engineeringProjects = projects.filter((p) => p.type === "Software Engineering");
   const salesEngineeringProjects = projects.filter((p) => p.type === "Sales Engineering");
   const researchProjects = projects.filter((p) => p.type === "Research");
 
