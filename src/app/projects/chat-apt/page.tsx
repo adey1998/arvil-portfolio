@@ -6,29 +6,6 @@ import { ExternalLink, Download } from "lucide-react";
 import "react-medium-image-zoom/dist/styles.css";
 
 export default function ChatAptProjectPage() {
-    const highlights = [
-        {
-            title: "Talk, Don't Filter",
-            description:
-                "No more dropdowns. Users describe what they want — 'quiet, pet-friendly near the red line' — and get results that match.",
-        },
-        {
-            title: "LLM-Powered Matching",
-            description:
-                "Built on GPT-4, the system understands lifestyle preferences and finds apartments that feel right, not just look right.",
-        },
-        {
-            title: "Gen Z Native UX",
-            description:
-                "Designed for a generation raised on messaging — fast, intuitive, and mobile-first. Feels more like texting a friend than house hunting.",
-        },
-        {
-            title: "Built for Plug & Play",
-            description:
-                "Modular backend makes it easy to integrate into leasing platforms, co-living startups, or student housing apps.",
-        },
-    ];
-
     return (
         <main className="bg-[#0a0f1a] text-white min-h-screen py-20 px-6 sm:px-10">
             <div className="max-w-5xl mx-auto space-y-16">
