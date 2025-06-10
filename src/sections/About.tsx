@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -44,12 +45,17 @@ export default function About() {
 
 
         {/* Right Column - Placeholder for Image / Illustration / Icon */}
-        <div className="flex justify-center md:justify-end">
-          <div className="w-64 h-64 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl shadow-lg border border-gray-700 flex items-center justify-center text-gray-500 font-inter transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl">
-            {/* Replace with image if available */}
-            <div className="text-2xl text-white">Your Photo</div>
+        <div className="flex justify-center md:justify-end items-center">
+          <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-3xl overflow-hidden shadow-lg border border-gray-700 transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl">
+            <Image
+              src="/images/about/portfolio-pic.jpg"
+              alt="Profile photo"
+              fill
+              className="object-cover rounded-2xl"
+            />
           </div>
         </div>
+
       </motion.div>
     </section>
   );
