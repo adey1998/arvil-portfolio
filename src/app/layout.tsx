@@ -19,6 +19,10 @@ export const metadata = {
   title: "Arvil Dey | Software Engineer | Tech Sales | Cancer Detection R&D",
   description:
     "Arvil is a software engineer with tech sales experience, passionate about cancer detection R&D and building impactful AI tools in healthcare.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   keywords: [
     "arvil dey",
     "cancer detection r&d",
