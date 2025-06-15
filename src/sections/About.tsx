@@ -22,19 +22,19 @@ export default function About() {
           </h2>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-6 font-inter">
-            I&apos;m <span className="text-white font-semibold">Arvil</span>, a fullstack engineer with a strong foundation in backend APIs (Spring Boot, Node.js) and modern frontend frameworks (React, Next.js, Vue). I love building clean, scalable systems — but just as much, I love working with people.
+            I&apos;m <span className="text-white font-semibold">Arvil</span> — a full-stack engineer with a solid backend base (Spring Boot, Node.js) and a love for building smooth frontends with React, Next.js, and Vue. I enjoy designing clean, scalable systems — but just as much, I enjoy working directly with people.
           </p>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-6 font-inter">
-            I&apos;m currently pivoting into Sales Engineering — bringing my technical skills into client-facing roles where I can run demos, solve problems, and communicate solutions that actually land. I&apos;ve worked across both engineering and pre-sales, and I get a kick out of helping customers connect the dots.
+            Alongside engineering, I&apos;ve also worked in technical pre-sales, where I&apos;ve run live demos, scoped out solutions, and helped customers understand how the tech actually solves their problems. I love the mix of deep tech and clear communication — turning features into something real and valuable for clients.
           </p>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-6 font-inter">
-            I&apos;ve deployed containerized apps with Docker and CI/CD pipelines, and launched on platforms like Render, AWS, and Azure. Whether it&apos;s coding, storytelling, or translating features into value — I&apos;m in my zone.
+            I&apos;ve shipped containerized apps with Docker, built out CI/CD pipelines, and deployed to platforms like Render, AWS, and Azure. Whether I&apos;m coding, storytelling, or mapping out solutions with a sales team — that&apos;s where I&apos;m in my zone.
           </p>
 
           <p className="text-gray-400 text-lg leading-relaxed font-inter">
-            On the side, I&apos;m building a cancer screening platform that uses AI and NLP to help clinics catch disease earlier and save lives. It&apos;s mission-driven work, and it&apos;s what keeps me fired up about tech.
+            Outside of work, I&apos;m building a cancer screening platform that uses AI and NLP to help clinics catch disease earlier. It&apos;s meaningful, mission-driven work — and it&apos;s what keeps me excited about tech.
           </p>
 
           <p className="text-gray-400 text-lg leading-relaxed font-inter mt-6">
