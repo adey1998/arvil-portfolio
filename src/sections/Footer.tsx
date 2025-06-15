@@ -13,14 +13,14 @@ export default function Footer() {
       >
         <div className="flex gap-6 text-2xl">
           <a
-            href="mailto:your-email@example.com"
+            href="mailto:arvil@gmail.com"
             className="hover:text-blue-500 transition duration-300"
             aria-label="Email"
           >
             <FaEnvelope />
           </a>
           <a
-            href="https://www.linkedin.com/in/your-linkedin"
+            href="https://www.linkedin.com/in/arvil-dey"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition duration-300"
@@ -29,7 +29,7 @@ export default function Footer() {
             <FaLinkedin />
           </a>
           <a
-            href="https://github.com/your-github"
+            href="https://github.com/adey1998"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition duration-300"
