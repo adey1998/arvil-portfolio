@@ -34,7 +34,8 @@ export default function OnqiArchitectureClean() {
   return (
     <main className="bg-[#0a0f1a] text-white min-h-screen py-20 px-6 sm:px-10">
       <div className="max-w-5xl mx-auto space-y-16">
-        {/* Sticky Back Button */}
+
+        {/* Back Button */}
         <motion.div
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
@@ -75,13 +76,9 @@ export default function OnqiArchitectureClean() {
             initial="hidden"
             animate="visible"
             variants={{
-              visible: {
-                transition: {
-                  staggerChildren: 0.1,
-                },
-              },
+              visible: { transition: { staggerChildren: 0.1 } },
             }}
-            className="grid m:grid-cols-2 gap-6 md:gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
           >
             {pipeline.map((stage, idx) => (
               <motion.div
@@ -95,8 +92,12 @@ export default function OnqiArchitectureClean() {
                 <div className="absolute -top-4 left-4 w-8 h-8 text-sm font-bold text-white bg-blue-500 rounded-full flex items-center justify-center shadow">
                   {idx + 1}
                 </div>
-                <h3 className="text-lg font-semibold text-blue-400 mb-2 pt-2">{stage.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">{stage.description}</p>
+                <h3 className="text-lg font-semibold text-blue-400 mb-2 pt-2">
+                  {stage.title}
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {stage.description}
+                </p>
               </motion.div>
             ))}
           </motion.div>
@@ -125,6 +126,7 @@ export default function OnqiArchitectureClean() {
           </motion.div>
         </section>
 
+        {/* Referral Sample */}
         <section className="space-y-4">
           <div className="text-sm text-gray-400">
             Here&apos;s what Onqi generates for eligible patients — a CMS-ready referral letter.
@@ -143,7 +145,6 @@ export default function OnqiArchitectureClean() {
             View Sample Referral (PDF)
           </motion.a>
         </section>
-
 
       </div>
     </main>

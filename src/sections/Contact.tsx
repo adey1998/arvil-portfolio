@@ -5,28 +5,28 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 px-6 bg-[#0a0f1a] text-white scroll-mt-24"
+      className="py-20 px-4 sm:px-6 bg-[#0a0f1a] text-white scroll-mt-24"
     >
       <motion.div
-        className="max-w-7xl mx-auto text-center"
+        className="max-w-3xl mx-auto text-center px-2"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-extrabold font-poppins mb-6 tracking-tight text-blue-400">
+        <h2 className="text-3xl sm:text-4xl font-extrabold font-poppins mb-6 tracking-tight text-blue-400">
           Contact Me
         </h2>
-        <p className="text-lg text-gray-300 mb-12 font-inter">
+        <p className="text-base sm:text-lg text-gray-300 mb-12 font-inter">
           Interested in collaborating or discussing opportunities? Let’s get in touch — I’d love to hear from you!
         </p>
       </motion.div>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-xl mx-auto px-2 sm:px-0">
         <motion.form
           action="https://formsubmit.co/your-email"
           method="POST"
-          className="w-full max-w-lg mx-auto space-y-6"
+          className="w-full space-y-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -57,7 +57,7 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="w-full py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-full shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-blue-700 hover:to-indigo-700 font-poppins focus:ring-4 focus:ring-blue-300"
+            className="w-full py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-full shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-blue-700 hover:to-indigo-700 font-poppins text-sm sm:text-base focus:ring-4 focus:ring-blue-300"
           >
             Send Message
           </button>

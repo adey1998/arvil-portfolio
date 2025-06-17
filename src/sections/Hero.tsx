@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-black via-[#0b0f19] to-black text-white overflow-hidden px-6">
+    <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-black via-[#0b0f19] to-black text-white overflow-hidden px-4 sm:px-6">
       {/* Glowing Blurs */}
       <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-indigo-900 opacity-30 rounded-full blur-3xl animate-pulse z-0" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-700 opacity-20 rounded-full blur-2xl z-0" />
@@ -15,25 +15,25 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1.2 }}
       >
-        <h1 className="text-6xl md:text-7xl font-poppins font-extrabold mb-4 leading-[1.1] tracking-tight drop-shadow-xl">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-poppins font-extrabold mb-4 leading-tight tracking-tight drop-shadow-xl">
           Engineering outcomes, not just code.
         </h1>
 
-        <p className="text-lg md:text-2xl font-inter text-gray-400 mb-6 max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg md:text-2xl font-inter text-gray-400 mb-6 max-w-xl mx-auto px-2 sm:px-0">
           Fullstack software engineer + sales engineer helping teams launch faster and sell smarter.
         </p>
 
         {/* Buttons */}
-        <div className="flex justify-center gap-5 mb-6">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-5 mb-6">
           <a
             href="#about"
-            className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-poppins font-semibold px-8 py-3 rounded-full shadow-xl ring-1 ring-white/10 backdrop-blur transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
+            className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-poppins font-semibold px-6 sm:px-8 py-3 rounded-full shadow-xl ring-1 ring-white/10 backdrop-blur transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
           >
             About Me
           </a>
           <a
             href="#projects"
-            className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-poppins font-semibold px-8 py-3 rounded-full shadow-xl ring-1 ring-white/10 backdrop-blur transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
+            className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-poppins font-semibold px-6 sm:px-8 py-3 rounded-full shadow-xl ring-1 ring-white/10 backdrop-blur transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
           >
             Projects
           </a>
@@ -41,7 +41,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 text-gray-500 animate-bounce z-10">
+      <div className="absolute bottom-6 sm:bottom-10 text-gray-500 animate-bounce z-10">
         <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
