@@ -130,7 +130,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       <a
         href={project.link}
         className="inline-block text-sm sm:text-base text-blue-500 font-poppins font-semibold px-6 py-2 sm:px-8 sm:py-3 rounded-full border border-blue-500 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-indigo-600 group-hover:text-white group-hover:scale-105 group-hover:shadow-2xl backdrop-blur transition-all duration-300 ease-in-out"
-        target="_blank"
         rel="noopener noreferrer"
       >
         View Project →
