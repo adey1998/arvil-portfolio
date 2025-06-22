@@ -33,7 +33,7 @@ const projects = [
   {
     title: "ParseMD – Async Medical Referral Processing API",
     description:
-      "A real-world backend for async medical referral processing. Parses PDFs into clinical metadata using Node.js, BullMQ, and MongoDB — built for healthtech workflows at scale.",
+      "A real-world backend for async medical referral processing — parses PDFs into structured clinical data using Node.js, BullMQ, and MongoDB.",
     link: "/projects/parsemd",
     type: "Software Engineering",
   },
