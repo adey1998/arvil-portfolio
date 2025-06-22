@@ -121,7 +121,7 @@ export default function ParseMDPage() {
 
                 {/* System Design Diagram */}
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-                    <h2 className="text-2xl font-poppins font-semibold mb-4">System Design Diagram</h2>
+                    <h2 className="text-2xl font-poppins font-semibold mb-4">Architecture Diagram</h2>
                     <Zoom>
                         <div className="relative w-full max-w-4xl rounded-xl overflow-hidden shadow-xl border border-white/10 mx-0">
                             <Image
