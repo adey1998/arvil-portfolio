@@ -3,51 +3,60 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
-    ShieldCheck,
-    Dock,
+    FileText,
+    Cpu,
+    ServerCog,
+    Activity,
+    DatabaseZap,
+    MonitorDot,
     Github,
-    Database,
-    Layers,
 } from "lucide-react";
-import Zoom from 'react-medium-image-zoom';
-import 'react-medium-image-zoom/dist/styles.css';
-import Image from 'next/image'
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+import Image from "next/image";
 
-export default function SyncroPage() {
+export default function ParseMDPage() {
     const techStack = [
-        "Spring Boot",
-        "Spring Security",
-        "JWT",
-        "BCrypt",
-        "Docker",
-        "PostgreSQL",
-        "JPA / Hibernate",
-        "Java 17",
-        "GitHub Actions (CI)",
-        "Render (CD)",
-        "Postman / JUnit",
+        "Node.js",
+        "Express",
+        "Multer",
+        "MongoDB",
+        "Mongoose",
+        "Redis",
+        "ioredis",
+        "BullMQ",
+        "Bull Board",
+        "pdf-parse",
+        "Rate Limiting Middleware",
+        "dotenv",
+        "Nodemon (dev)"
     ];
+
 
     const features = [
         {
-            icon: <ShieldCheck className="w-5 h-5 text-blue-400" />,
-            text: "Secure auth with JWT and Spring Security — role-based access baked in from the start",
+            icon: <FileText className="w-5 h-5 text-blue-400" />,
+            text: "Upload medical referral PDFs via REST — returns job ID instantly",
         },
         {
-            icon: <Dock className="w-5 h-5 text-blue-400" />,
-            text: "Dockerized from top to bottom — run it anywhere, every time",
+            icon: <Cpu className="w-5 h-5 text-blue-400" />,
+            text: "Background worker extracts clinical data asynchronously",
         },
         {
-            icon: <Github className="w-5 h-5 text-blue-400" />,
-            text: "CI/CD powered by GitHub Actions and Render — deploy on push, no drama",
+            icon: <ServerCog className="w-5 h-5 text-blue-400" />,
+            text: "Redis + BullMQ for robust queueing, retries, and backoff",
         },
         {
-            icon: <Database className="w-5 h-5 text-blue-400" />,
-            text: "PostgreSQL with JPA/Hibernate — clean queries, no boilerplate",
+            icon: <DatabaseZap className="w-5 h-5 text-blue-400" />,
+            text: "MongoDB stores job state and results with 7-day TTL cleanup",
         },
         {
-            icon: <Layers className="w-5 h-5 text-blue-400" />,
-            text: "Modular codebase that’s ready to break into microservices when you are",
+            icon: <MonitorDot className="w-5 h-5 text-blue-400" />,
+            text: "Bull Board for real-time job status, failures, and retries",
+        },
+        {
+            icon: <Activity className="w-5 h-5 text-blue-400" />,
+            text: "Extensible architecture — plug in LLMs, NLP, or ICD-10 mapping",
         },
     ];
 
@@ -59,32 +68,20 @@ export default function SyncroPage() {
             className="min-h-screen bg-[#0a0f1a] text-white px-6 py-24"
         >
             <div className="max-w-5xl mx-auto space-y-16">
-                {/* Sticky Back Button */}
-                <motion.div
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <Link
-                        href="/#projects"
-                        className="text-blue-400 hover:text-blue-300 transition font-inter text-sm"
-                    >
+                {/* Back Button */}
+                <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
+                    <Link href="/#projects" className="text-blue-400 hover:text-blue-300 transition font-inter text-sm">
                         ← Back to Projects
                     </Link>
                 </motion.div>
 
-                {/* Title and Description */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                >
+                {/* Title + Description */}
+                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
                     <h1 className="text-4xl md:text-5xl font-poppins font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 drop-shadow-md">
-                        Syncro – Remote Productivity API
+                        ParseMD – Async Referral Processing API
                     </h1>
                     <p className="text-lg text-gray-300 font-inter">
-                        This ain’t your average CRUD app.
-                        Syncro is a full-on Spring Boot backend built for real-world teams — secure auth, role-based access, Dockerized deployment, and CI/CD from the jump. You could drop this into a startup tomorrow.
+                        A production-ready backend for asynchronous medical referral processing. Converts uploaded PDFs into structured clinical metadata using Node.js, BullMQ, and MongoDB — designed for real-world scalability in modern healthtech.
                     </p>
                 </motion.div>
 
@@ -92,13 +89,7 @@ export default function SyncroPage() {
                 <motion.div
                     initial="hidden"
                     animate="visible"
-                    variants={{
-                        visible: {
-                            transition: {
-                                staggerChildren: 0.1,
-                            },
-                        },
-                    }}
+                    variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
                     className="relative rounded-xl backdrop-blur-md shadow-inner flex flex-wrap gap-3 font-inter"
                 >
                     {techStack.map((tech, i) => (
@@ -116,14 +107,8 @@ export default function SyncroPage() {
                 </motion.div>
 
                 {/* Features */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    <h2 className="text-2xl font-poppins font-semibold mb-4">
-                        Key Features
-                    </h2>
+                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+                    <h2 className="text-2xl font-poppins font-semibold mb-4">Key Features</h2>
                     <ul className="space-y-4 font-inter text-gray-300">
                         {features.map(({ icon, text }, i) => (
                             <li key={i} className="flex items-start gap-3">
@@ -134,7 +119,25 @@ export default function SyncroPage() {
                     </ul>
                 </motion.div>
 
-                {/* In Action Screenshots */}
+                {/* System Design Diagram */}
+                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+                    <h2 className="text-2xl font-poppins font-semibold mb-4">System Design Diagram</h2>
+                    <Zoom>
+                        <div className="relative w-full max-w-4xl rounded-xl overflow-hidden shadow-xl border border-white/10 mx-0">
+                            <Image
+                                src="/images/parsemd/ParseMD — System Architecture.png"
+                                alt="System design diagram for ParseMD"
+                                width={1200}
+                                height={800}
+                                unoptimized
+                                className="w-full h-auto"
+                            />
+                        </div>
+                    </Zoom>
+                    <p className="text-sm text-gray-400 mt-2">Architecture Pattern: Async Job Queue with Stateless API and Polling Client</p>
+                </motion.div>
+
+                {/* Screenshots */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -142,61 +145,40 @@ export default function SyncroPage() {
                     className="space-y-8"
                 >
                     <h2 className="text-2xl font-poppins font-semibold text-white mb-4">In Action</h2>
-
                     <p className="text-sm text-gray-400 mb-3">Scroll → to view more</p>
 
                     <div className="overflow-x-auto">
                         <div className="flex gap-6 w-max pb-2">
                             {[
                                 {
-                                    src: "/images/syncro/login-token (admin).png",
-                                    alt: "Login request (ADMIN) returning JWT",
-                                    caption: "Login as ADMIN – returns JWT",
+                                    src: "/images/parsemd/upload-pdf.png",
+                                    alt: "PDF Upload API request",
+                                    caption: "Upload PDF – returns job ID",
                                 },
                                 {
-                                    src: "/images/syncro/get-users (admin).png",
-                                    alt: "Get all users as ADMIN",
-                                    caption: "Get users as ADMIN via /api/users",
+                                    src: "/images/parsemd/get-job-result.png",
+                                    alt: "Final parsed result",
+                                    caption: "Parsed result with patient data",
                                 },
                                 {
-                                    src: "/images/syncro/login-token (user).png",
-                                    alt: "Login request (USER) returning JWT",
-                                    caption: "Login as USER – returns JWT",
+                                    src: "/images/parsemd/get-job-status.png",
+                                    alt: "Polling job status",
+                                    caption: "Check job status by ID",
                                 },
                                 {
-                                    src: "/images/syncro/RBAC - access denied (user).png",
-                                    alt: "RBAC Denied",
-                                    caption: "USER access denied for /users — RBAC in action",
+                                    src: "/images/parsemd/bullMQ-dashboard.png",
+                                    alt: "Bull Board dashboard",
+                                    caption: "Live queue monitoring",
                                 },
                                 {
-                                    src: "/images/syncro/create-task.png",
-                                    alt: "Create task",
-                                    caption: "Create new task",
+                                    src: "/images/parsemd/processed-job-details-1.png",
+                                    alt: "Bull Board processed job details",
+                                    caption: "Job data details",
                                 },
                                 {
-                                    src: "/images/syncro/get-tasks.png",
-                                    alt: "Get tasks",
-                                    caption: "View all tasks",
-                                },
-                                {
-                                    src: "/images/syncro/docker-logs-backend.png",
-                                    alt: "Docker backend logs",
-                                    caption: "Docker Compose – Spring Boot startup",
-                                },
-                                {
-                                    src: "/images/syncro/docker-logs-postgres.png",
-                                    alt: "Docker Postgres logs",
-                                    caption: "Docker Compose – PostgreSQL startup",
-                                },
-                                {
-                                    src: "/images/syncro/ci-pipeline.png",
-                                    alt: "CI pipeline",
-                                    caption: "GitHub Actions – CI triggered on push",
-                                },
-                                {
-                                    src: "/images/syncro/cd-pipeline.png",
-                                    alt: "CD pipeline",
-                                    caption: "Render – CD pipeline for auto-deploy",
+                                    src: "/images/parsemd/processed-job-details-2.png",
+                                    alt: "Bull Board processed job options",
+                                    caption: "Job options panel",
                                 },
                             ].map((img, i) => (
                                 <motion.div
@@ -221,12 +203,12 @@ export default function SyncroPage() {
                             ))}
                         </div>
                     </div>
-
                 </motion.div>
+
 
                 {/* GitHub Link */}
                 <motion.a
-                    href="https://github.com/adey1998/syncro"
+                    href="https://github.com/adey1998/parsemd"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.03 }}

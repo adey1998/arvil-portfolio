@@ -30,6 +30,13 @@ const projects = [
     link: "https://www.onqilabs.com/blogs",
     type: "Research",
   },
+  {
+    title: "ParseMD – Async Medical Referral Processing API",
+    description:
+      "A real-world backend for async medical referral processing. Parses PDFs into clinical metadata using Node.js, BullMQ, and MongoDB — built for healthtech workflows at scale.",
+    link: "/projects/parsemd",
+    type: "Software Engineering",
+  },
 ];
 
 export default function Projects() {

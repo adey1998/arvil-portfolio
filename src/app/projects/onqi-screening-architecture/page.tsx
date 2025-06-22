@@ -104,27 +104,29 @@ export default function OnqiArchitectureClean() {
         </section>
 
         {/* Architecture Diagram */}
-        <section className="space-y-6">
-          <h2 className="text-2xl font-semibold text-white">Architecture Diagram</h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-2xl font-poppins font-semibold mb-4 text-white">
+            Architecture Diagram
+          </h2>
 
-          <motion.div
-            whileHover={{ scale: 1.015 }}
-            transition={{ type: "spring", stiffness: 200, damping: 22 }}
-            className="w-full max-w-3xl border border-white/10 rounded-lg overflow-hidden"
-          >
-            <Zoom>
+          <Zoom>
+            <div className="relative w-full max-w-2xl rounded-2xl overflow-hidden shadow-xl border border-white/10">
               <Image
                 src="/images/onqi-screening-architecture/onqi-architecture-diagram.png"
-                alt="Onqi Architecture Diagram"
-                width={1000}
+                alt="System design diagram for Onqi Screening"
+                width={1000} // reduce from 1200
                 height={0}
                 sizes="100vw"
                 unoptimized
-                className="w-full h-auto object-contain"
+                className="w-full h-auto rounded-2xl"
               />
-            </Zoom>
-          </motion.div>
-        </section>
+            </div>
+          </Zoom>
+        </motion.div>
 
         {/* Referral Sample */}
         <section className="space-y-4">
@@ -133,7 +135,7 @@ export default function OnqiArchitectureClean() {
           </div>
 
           <motion.a
-            href="/docs/referral-example.pdf"
+            href="/docs/Sample Referral.pdf"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}
@@ -145,7 +147,6 @@ export default function OnqiArchitectureClean() {
             View Sample Referral (PDF)
           </motion.a>
         </section>
-
       </div>
     </main>
   );
