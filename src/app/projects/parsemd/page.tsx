@@ -134,7 +134,7 @@ export default function ParseMDPage() {
                             />
                         </div>
                     </Zoom>
-                    <p className="text-sm text-gray-400 mt-2">Architecture Pattern: Async Job Queue with Stateless API and Polling Client</p>
+                    <p className="text-sm text-gray-400 mt-2">Architecture Pattern: Async Job Queue with Stateless API, Producer–Consumer Pattern, and Polling Client</p>
                 </motion.div>
 
                 {/* Screenshots */}
