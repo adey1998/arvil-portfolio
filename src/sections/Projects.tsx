@@ -10,17 +10,10 @@ const projects = [
     type: "Software Engineering",
   },
   {
-    title: "Onqi Screening – Solution Architecture",
+    title: "Onqi Screening: Demo & Architecture",
     description:
-      "Technical solution design for an AI-powered cancer screening platform. Built to show how clinics can identify high-risk patients earlier using EHR data and NLP models.",
+      "AI-powered screening workflow designed to help clinics catch high-risk patients earlier — using EHR data, NLP, and automated referral tools.",
     link: "/projects/onqi-screening-architecture",
-    type: "Sales Engineering",
-  },
-  {
-    title: "ChatAPT – AI-Powered Rentals for Gen Z",
-    description:
-      "Shaped the pitch and product story for an AI-driven rental tool that helps Gen Z find apartments based on lifestyle and intent — not filters.",
-    link: "/projects/chat-apt",
     type: "Sales Engineering",
   },
   {
