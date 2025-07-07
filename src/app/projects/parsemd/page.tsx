@@ -81,7 +81,7 @@ export default function ParseMDPage() {
                         ParseMD – Async Referral Processing API
                     </h1>
                     <p className="text-lg text-gray-300 font-inter">
-                        A production-ready backend for asynchronous medical referral processing. Converts uploaded PDFs into structured clinical metadata using Node.js, BullMQ, and MongoDB — designed for real-world scalability in modern healthtech.
+                        A production-ready backend for asynchronous medical referral processing. Takes uploaded PDF documents and turns them into structured clinical data using Node.js, BullMQ, and MongoDB — designed for real-world scalability in modern healthtech.
                     </p>
                 </motion.div>
 

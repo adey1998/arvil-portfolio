@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Download } from "lucide-react";
+import { Download, PlayCircle, FileText } from "lucide-react";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import Image from "next/image";
+
 
 export default function OnqiArchitectureClean() {
   const pipeline = [
@@ -56,7 +57,7 @@ export default function OnqiArchitectureClean() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-5xl font-poppins font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 drop-shadow-md">
-            Onqi Screening: Built to Detect, Designed to Sell
+            Onqi Screening: Detect Early. Refer Fast.
           </h1>
           <p className="text-lg text-gray-300 font-inter max-w-3xl">
             An AI-powered screening engine designed to help clinics identify at-risk patients early — and generate revenue through value-based care programs.
@@ -65,9 +66,25 @@ export default function OnqiArchitectureClean() {
 
         {/* CTA Buttons */}
         <div className="flex flex-wrap gap-4">
-          <a href="https://loom.com/embed/YOUR_VIDEO_ID" target="_blank" className="px-5 py-2 text-sm border border-blue-500 text-blue-300 rounded-full hover:bg-blue-500 hover:text-white transition-all">▶ Watch 2-min Demo</a>
-          <a href="/docs/Onqi_SE_Pitch.pdf" target="_blank" className="px-5 py-2 text-sm border border-blue-500 text-blue-300 rounded-full hover:bg-blue-500 hover:text-white transition-all">📄 View SE Pitch Deck</a>
+          <a
+            href="https://loom.com/embed/YOUR_VIDEO_ID"
+            target="_blank"
+            className="inline-flex items-center gap-2 px-5 py-2 text-sm border border-blue-500 text-blue-300 rounded-full hover:bg-blue-500 hover:text-white transition-all"
+          >
+            <PlayCircle className="w-4 h-4" />
+            Watch 2-min Demo
+          </a>
+
+          <a
+            href="/docs/Onqi_SE_Pitch.pdf"
+            target="_blank"
+            className="inline-flex items-center gap-2 px-5 py-2 text-sm border border-blue-500 text-blue-300 rounded-full hover:bg-blue-500 hover:text-white transition-all"
+          >
+            <FileText className="w-4 h-4" />
+            View SE Pitch Deck
+          </a>
         </div>
+
 
         {/* Business Outcomes */}
         <section className="space-y-4">
