@@ -13,7 +13,7 @@ const projects = [
     title: "Onqi Screening: Demo & Architecture",
     description:
       "AI-powered screening workflow designed to help clinics catch high-risk patients earlier — using EHR data, NLP, and automated referral tools.",
-    link: "/projects/onqi-screening-architecture",
+    link: "/projects/onqi-screening",
     type: "Sales Engineering",
   },
   {

@@ -1,12 +1,20 @@
 "use client";
-
+import {
+  Users,
+  Clock,
+  DollarSign,
+  Stethoscope,
+  ClipboardCheck,
+  Clock3,
+  ClipboardList,
+  BarChart3,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Download, PlayCircle, FileText } from "lucide-react";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import Image from "next/image";
-
 
 export default function OnqiArchitectureClean() {
   const pipeline = [
@@ -29,6 +37,30 @@ export default function OnqiArchitectureClean() {
     {
       title: "Referral Generator + CMS Docs",
       description: "Jinja2 templates + WeasyPrint to produce compliant referrals and documentation — instantly available to clinicians via a simple UI.",
+    },
+  ];
+
+  const outcomes = [
+    {
+      icon: <Users className="w-5 h-5 text-blue-400" />,
+      title: "2–3× More Patients Identified",
+      description:
+        "NLP flags at-risk patients CMS often misses — using unstructured notes, not just checkboxes.",
+      badge: "+2–3×",
+    },
+    {
+      icon: <Clock3 className="w-5 h-5 text-blue-400" />,
+      title: "30% Faster Referrals",
+      description:
+        "Prefilled docs and one-click referrals reduce time-to-referral delays by 30%+.",
+      badge: "-30%",
+    },
+    {
+      icon: <DollarSign className="w-5 h-5 text-blue-400" />,
+      title: "Boosted Reimbursement ROI",
+      description:
+        "Clinics unlock value-based bonuses through ACO REACH and UDS — while closing care gaps.",
+      badge: "↑ ROI",
     },
   ];
 
@@ -56,7 +88,7 @@ export default function OnqiArchitectureClean() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-5xl font-poppins font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 drop-shadow-md">
+          <h1 className="text-4xl md:text-5xl font-poppins font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 drop-shadow-md leading-[1.15]">
             Onqi Screening: Detect Early. Refer Fast.
           </h1>
           <p className="text-lg text-gray-300 font-inter max-w-3xl">
@@ -85,25 +117,68 @@ export default function OnqiArchitectureClean() {
           </a>
         </div>
 
+        {/* Proven Outcomes for Clinics */}
+        <section className="space-y-6">
+          <h2 className="text-2xl font-bold text-white">Proven Outcomes for Clinics</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {outcomes.map((item, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.02, y: -2 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                className="relative bg-[#111827] border border-blue-500/10 p-6 rounded-2xl shadow-sm"
+              >
+                {/* Badge */}
+                <div className="absolute top-4 right-4 bg-blue-600 text-white text-[11px] font-semibold px-2 py-[2px] rounded-full shadow-md">
+                  {item.badge}
+                </div>
 
-        {/* Business Outcomes */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-white">Clinic Value at a Glance</h2>
-          <ul className="text-gray-300 text-base list-disc list-inside space-y-2">
-            <li>Uncovers 2–3x more screen-eligible patients via NLP</li>
-            <li>Auto-generates CMS documentation for faster reimbursement</li>
-            <li>Reduces time-to-referral by 30% and chart review time by 40%</li>
-          </ul>
+                {/* Icon */}
+                <div className="mb-3">{item.icon}</div>
+
+                {/* Title */}
+                <h3 className="text-lg font-bold text-blue-400">{item.title}</h3>
+
+                {/* Description */}
+                <p className="text-sm text-gray-400 mt-1">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </section>
 
-        {/* Personas */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-white">Built for Buyers</h2>
-          <ul className="text-gray-300 text-base list-disc list-inside space-y-2">
-            <li><strong>Clinicians:</strong> See eligibility flags before the visit</li>
-            <li><strong>Care Managers:</strong> One-click referral generation</li>
-            <li><strong>VBC Executives:</strong> Dashboard tracking + ROI insight</li>
-          </ul>
+        {/* Designed for Every Team Member */}
+        <section className="space-y-6">
+          <h2 className="text-2xl font-semibold text-white">Designed for Every Team Member</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: <Stethoscope className="w-6 h-6 text-blue-400" />,
+                title: "Clinicians",
+                desc: "View risk flags directly in the chart — no digging, no surprises.",
+              },
+              {
+                icon: <ClipboardCheck className="w-6 h-6 text-blue-400" />,
+                title: "Care Managers",
+                desc: "Auto-generate compliant referrals in seconds, fully documented.",
+              },
+              {
+                icon: <BarChart3 className="w-6 h-6 text-blue-400" />,
+                title: "VBC Executives",
+                desc: "Track performance, trends, and ROI across your screening program.",
+              },
+            ].map((card, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ scale: 1.02, y: -2 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                className="bg-[#111827] border border-blue-500/10 p-6 rounded-2xl shadow-sm"
+              >
+                <div className="mb-3">{card.icon}</div>
+                <h3 className="text-lg font-semibold text-blue-400">{card.title}</h3>
+                <p className="text-sm text-gray-400 mt-1">{card.desc}</p>
+              </motion.div>
+            ))}
+          </div>
         </section>
 
         {/* Architecture Breakdown */}
@@ -141,6 +216,7 @@ export default function OnqiArchitectureClean() {
           </motion.div>
         </section>
 
+        {/* System Overview Diagra */}
         <section className="space-y-6">
           <h2 className="text-2xl font-semibold text-white">System Overview Diagram</h2>
           <Zoom>
@@ -157,7 +233,6 @@ export default function OnqiArchitectureClean() {
             </div>
           </Zoom>
         </section>
-
 
         {/* Sample Referral */}
         <section className="space-y-4">
