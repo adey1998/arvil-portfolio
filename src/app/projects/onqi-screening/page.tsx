@@ -1,12 +1,10 @@
 "use client";
 import {
   Users,
-  Clock,
   DollarSign,
   Stethoscope,
   ClipboardCheck,
   Clock3,
-  ClipboardList,
   BarChart3,
 } from "lucide-react";
 import { motion } from "framer-motion";
